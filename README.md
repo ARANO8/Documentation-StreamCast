@@ -50,14 +50,8 @@ The goal is to provide a smooth and secure streaming experience by integrating a
 
 ### Architecture Diagram (Simplified)
 
-```mermaid
-flowchart LR
-    User["User (Web/Browser)"] -->|HTTP/HTTPS| Frontend["Frontend (React)"]
-    Frontend -->|API Requests| Backend["Backend (NestJS)"]
-    Backend -->|Queries| DB[(PostgreSQL)]
-    OBS["OBS Studio"] -->|RTMP Stream| RTMP["Nginx RTMP"]
-    RTMP -->|on_publish Validate Key| Backend
-...
+![System Architecture](/images/architecture-diagram.svg)
+
 ---
 
 ## 3. User Flow
